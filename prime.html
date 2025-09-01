@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Even Numbers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f4f6f9;
+    }
+    h2 {
+      color: darkblue;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: darkblue;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: navy;
+    }
+    ul {
+      list-style-type: square;
+      margin-top: 20px;
+      text-align: left;
+      display: inline-block;
+    }
+    li {
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Even Numbers from 1 to 10</h2>
+  <button onclick="printEvenNumbers()">Show Even Numbers</button>
+
+  <ul id="output"></ul>
+
+  <script>
+    function printEvenNumbers() {
+      let outputList = document.getElementById("output");
+      outputList.innerHTML = ""; // clear old results
+
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          let listItem = document.createElement("li");
+          listItem.textContent = i;
+          outputList.appendChild(listItem);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
